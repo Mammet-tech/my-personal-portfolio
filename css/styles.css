@@ -117,3 +117,51 @@ nav ul li a:hover{
     height: 150px;
   }
 }
+.services-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin: 100px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.services-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.services-content {
+  max-width: 500px;
+}
+
+.services-content h1 {
+  font-size: 36px;
+  color: #00abf0;
+  margin-bottom: 20px;
+}
+
+.services-content ul {
+  list-style: none;
+  font-size: 18px;
+}
+
+.services-content ul li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services-image {
+    width: 100%;
+    height: auto;
+  }
+}
