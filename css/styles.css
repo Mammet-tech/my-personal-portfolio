@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins', sans-serif;
 }
 body {
   background: #080808;
@@ -10,6 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
 }
 nav ul {
   list-style: none;
@@ -22,23 +25,42 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+transition: .3s;
+}
+nav ul li a:hover{
+  color: #00abf0;
 }
 #logo {
-  margin: 40px;
+  margin: 25px;
   font-size: 24px;
-  color: #f00;
+  color: #ededed;
 }
 .home-image {
-  width: 600px;
+
+  height: 500px;
 }
 .home-section {
   display: flex;
   justify-content: center;
-  gap: 10rem;
-  margin: 100px;
+  gap: 15rem;
+  margin: 100px;  
+  height: 500px;
   
 }
-.intro{
+.home-section h1{
+  font-size: 56px;
+  line-height: 1.2;
+}
+.home-section h3{
   font-size: 32px;
-  font-style: italic;
+  color: #00abf0;
+}
+.home-section p{
+  font-size: 18px;
+  margin-top: 20px;
+}
+.home-section .intro{
+  
+  margin-top: 50px;
+  max-width: 500px;
 }
