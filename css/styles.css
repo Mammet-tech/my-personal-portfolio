@@ -23,3 +23,22 @@ nav ul li a {
   text-decoration: none;
   font-size: 18px;
 }
+#logo {
+  margin: 40px;
+  font-size: 24px;
+  color: #f00;
+}
+.home-image {
+  width: 600px;
+}
+.home-section {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  margin: 100px;
+  
+}
+.intro{
+  font-size: 32px;
+  font-style: italic;
+}
