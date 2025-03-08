@@ -4,69 +4,94 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
 body {
   background: #080808;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
 }
+
+main {
+  flex: 1;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 nav ul {
   list-style: none;
   display: flex;
 }
+
 nav ul li {
-  margin: 0 100px;
+  margin: 0 40px;
 }
+
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
 }
+
 nav ul li a:hover {
   color: #00abf0;
 }
+
 #logo {
   margin: 25px;
   font-size: 24px;
   color: #f4a950;
   background: #161b21;
 }
+
 .home-image {
-    height: 400px;
-  object-fit: cover; 
+  height: 400px;
+  object-fit: cover;
 }
-.home-section {
+
+.home-section,
+.services-section {
   display: flex;
   justify-content: center;
   gap: 10rem;
   margin: 100px;
-
 }
+
 .home-section h1 {
   font-size: 56px;
   line-height: 1.2;
 }
+
 .home-section h3 {
   font-size: 32px;
   color: #00abf0;
 }
+
 .home-section p {
   font-size: 18px;
   margin-top: 20px;
- 
 }
-.home-section .intro {
- margin: 50px; 
- width: 400px; 
- border-radius: 10px;
+
+.home-section .intro,
+.about-section,
+.services-content,
+.contact-section {
   background: rgba(255, 255, 255, 0.1);
   padding: 40px;
+  border-radius: 10px;
 }
+
 .about-section {
   display: flex;
   align-items: center;
@@ -75,9 +100,6 @@ nav ul li a:hover {
   text-align: center;
   width: 60%;
   margin: 50px auto;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: 10px;
 }
 
 .about-section h1,
@@ -88,10 +110,13 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.about-section p {
+.about-section p,
+.contact-section p,
+.services-content p {
   font-size: 18px;
   line-height: 1.8;
   max-width: 800px;
+  margin-bottom: 20px;
 }
 
 .about-image {
@@ -103,7 +128,6 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-
   .about-section {
     width: 80%;
     padding: 30px;
@@ -122,32 +146,15 @@ nav ul li a:hover {
     height: 150px;
   }
 }
-.services-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15rem;
-  margin: 100px;
-  padding: 50px; 
- 
-
-}
 
 .services-image {
-  width: 400;
+  width: 400px;
   height: 600px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.services-content {
-  width: 400px;
-  background: rgba(255, 255, 255, 0.1);
- padding: 40px;
- border-radius: 10px;
-}
-
-.services-content ul { 
+.services-content ul {
   font-size: 18px;
 }
 
@@ -162,24 +169,15 @@ nav ul li a:hover {
   }
 
   .services-image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 }
+
 .contact-section {
   width: 50%;
   margin: 100px auto;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 10px;
   text-align: center;
-}
-
-
-.contact-section p,
-.services-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
 }
 
 form {
@@ -221,10 +219,10 @@ button {
 button:hover {
   background: #0085c3;
 }
+
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   padding: 10px 20px;
+  text-align: center;
   background: transparent;
 }
